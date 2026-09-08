@@ -8,12 +8,11 @@ const Menu = () => {
     console.log("Profile clicked");
   };
 
-  const handleLogout = () => {
-    localStorage.removeItem("token");
-    localStorage.removeItem("username");
-    // frontend app ka port yahan daalo (jahan Home/Login page hai)
-    window.location.href = "http://localhost:5173/";
-  };
+ const handleLogout = () => {
+  localStorage.removeItem("token");
+  localStorage.removeItem("username");
+  window.location.href = "https://zerodha-dtsg.onrender.com/";
+};
 
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-top">

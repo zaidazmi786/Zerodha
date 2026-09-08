@@ -7,8 +7,8 @@ const Orders = () => {
   const [allOrders, setAllOrders] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:8080/allOrders").then((res) => {
-      console.log(res.data);
+axios.get("https://backend-y0wn.onrender.com/allOrders").then((res) => {    
+    console.log(res.data);
       setAllOrders(res.data);
     });
   }, []);

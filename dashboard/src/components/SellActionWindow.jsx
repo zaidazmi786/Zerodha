@@ -27,9 +27,9 @@ const SellActionWindow = ({ uid }) => {
     setError("");
     setIsSubmitting(true);
 
-    axios
-      .post("http://localhost:8080/newOrder", {
-        name: uid,
+    
+axios.post("https://backend-y0wn.onrender.com/newOrder", {    
+      name: uid,
         qty: qty,
         price: price,
         mode: "SELL",

@@ -9,27 +9,25 @@ function SignUp() {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSignup = () => {
-    if (!username || !password) {
-      setError("Please enter both username and password");
-      return;
-    }
+  if (!username || !password) {
+    setError("Please enter both username and password");
+    return;
+  }
 
-    setError("");
-    setIsSubmitting(true);
+  setError("");
+  setIsSubmitting(true);
 
-    axios
-      .post("http://localhost:8080/signup", { username, password })
-      .then((res) => {
-        setIsSubmitting(false);
-        // dashboard app alag port par chal raha hai, isliye token URL query param se bhejna hoga
-window.location.href = `http://localhost:5174/dashboard?token=${res.data.token}&username=${res.data.username}`;  
+  axios
+    .post("https://backend-y0wn.onrender.com/signup", { username, password })
+    .then((res) => {
+      setIsSubmitting(false);
+      window.location.href = `https://dashboard-xafm.onrender.com/dashboard?token=${res.data.token}&username=${res.data.username}`;
     })
-      .catch((err) => {
-        setIsSubmitting(false);
-        setError(err.response?.data?.error || "Signup failed");
-      });
-  };
-
+    .catch((err) => {
+      setIsSubmitting(false);
+      setError(err.response?.data?.error || "Signup failed");
+    });
+};
   return (
     <>
       {/* Signup Section */}

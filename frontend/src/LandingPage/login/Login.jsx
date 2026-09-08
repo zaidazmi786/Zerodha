@@ -7,26 +7,26 @@ function Login() {
   const [error, setError] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleLogin = () => {
-    if (!username || !password) {
-      setError("Please enter both username and password");
-      return;
-    }
+const handleLogin = () => {
+  if (!username || !password) {
+    setError("Please enter both username and password");
+    return;
+  }
 
-    setError("");
-    setIsSubmitting(true);
+  setError("");
+  setIsSubmitting(true);
 
-    axios
-      .post("http://localhost:8080/login", { username, password })
-      .then((res) => {
-        setIsSubmitting(false);
-        window.location.href = `http://localhost:5174/dashboard?token=${res.data.token}&username=${res.data.username}`;
-      })
-      .catch((err) => {
-        setIsSubmitting(false);
-        setError(err.response?.data?.error || "Login failed");
-      });
-  };
+  axios
+    .post("https://backend-y0wn.onrender.com/login", { username, password })
+    .then((res) => {
+      setIsSubmitting(false);
+      window.location.href = `https://dashboard-xafm.onrender.com/dashboard?token=${res.data.token}&username=${res.data.username}`;
+    })
+    .catch((err) => {
+      setIsSubmitting(false);
+      setError(err.response?.data?.error || "Login failed");
+    });
+};
 
   return (
     <div className="container py-5" style={{ maxWidth: "400px" }}>
