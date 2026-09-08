@@ -8,17 +8,17 @@ const Charts = () => {
   const [allPositions, setAllPositions] = useState([]);
   const [allOrders, setAllOrders] = useState([]);
 
-  useEffect(() => {
-    axios.get("http://localhost:8080/allHoldings").then((res) => {
-      setAllHoldings(res.data);
-    });
-    axios.get("http://localhost:8080/allPosition").then((res) => {
-      setAllPositions(res.data);
-    });
-    axios.get("http://localhost:8080/allOrders").then((res) => {
-      setAllOrders(res.data);
-    });
-  }, []);
+ useEffect(() => {
+  axios.get("https://backend-y0wn.onrender.com/allHoldings").then((res) => {
+    setAllHoldings(res.data);
+  });
+  axios.get("https://backend-y0wn.onrender.com/allPosition").then((res) => {
+    setAllPositions(res.data);
+  });
+  axios.get("https://backend-y0wn.onrender.com/allOrders").then((res) => {
+    setAllOrders(res.data);
+  });
+}, []);
 
   // ---- Holdings data ----
   const holdingsLabels = allHoldings.map((stock) => stock.name);
