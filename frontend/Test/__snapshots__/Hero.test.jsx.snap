@@ -1,0 +1,31 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Hero Section > matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="container p-4"
+  >
+    <div
+      class="row text-center"
+    >
+      <img
+        alt="Invest in everything"
+        class="mb-5"
+        src="/Media/Images/homeHero.png"
+      />
+      <h1>
+        Invest in everything
+      </h1>
+      <p>
+        Online platform to invest in stocks, derivatives, mutual funds, ETFs, bonds, and more.
+      </p>
+      <button
+        class="btn btn-primary btn-lg mt-4 mb-4"
+        style="width: 30%; margin: 0px auto;"
+      >
+        Sign up for free
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;

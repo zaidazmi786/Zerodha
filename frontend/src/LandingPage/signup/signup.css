@@ -1,0 +1,29 @@
+.faq-item {
+  border-top: 1px solid #ddd;
+  position: relative;
+}
+
+.faq-item::before {
+  content: "";
+  display: block;
+  width: 90px;
+  height: 4px;
+  background-color: #387ed1;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.faq-question {
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 16px;
+  color: #222;
+  cursor: pointer;
+}
+
+.faq-question span:last-child {
+  font-size: 18px;
+}

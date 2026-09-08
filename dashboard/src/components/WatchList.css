@@ -1,0 +1,23 @@
+.watchlist-container {
+  position: sticky;
+  top: 0;
+  overflow-y: auto;
+  height: 100vh;
+}
+
+.search-container {
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  z-index: 10;
+  border-bottom: 1px solid #eee;
+}
+
+/* Mobile/tablet - layout stack hota hai, isliye WatchList ko poori height nahi lene dena,
+   warna neeche ka content (Holdings/Positions) chhup jaayega */
+@media (max-width: 767px) {
+  .watchlist-container {
+    height: 50vh;
+    max-height: 50vh;
+  }
+}
