@@ -7,7 +7,7 @@ function Awards() {
 
                 <div className='col-12 col-md-6 p-3 p-md-5 text-center'>
                     <img
-                        src="public/Media/Images/largestBroker.svg"
+                    src="/Media/Images/largestBroker.svg"
                         alt="Largest Stock Broker in India"
                         className="img-fluid"
                         style={{ maxWidth: "350px" }}
