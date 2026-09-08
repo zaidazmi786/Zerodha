@@ -1,6 +1,5 @@
 import React, { useState, useContext } from "react";
 import { watchlist } from "../data/data";
-import { KeyboardArrowDown, KeyboardArrowUp } from "@mui/icons-material";
 import GeneralContext from "./GeneralContext";
 import DoughnutChartComponent from "./DoughnutChartComponent";
 import "./WatchList.css";
@@ -70,11 +69,9 @@ const WatchListItem = ({ stock }) => {
             {stock.percent}%
           </span>
 
-          {stock.isDown ? (
-            <KeyboardArrowDown className="text-danger" fontSize="small" />
-          ) : (
-            <KeyboardArrowUp className="text-success" fontSize="small" />
-          )}
+          <span className={stock.isDown ? "text-danger" : "text-success"} style={{ fontSize: "14px" }}>
+            {stock.isDown ? "▼" : "▲"}
+          </span>
 
           <span className={stock.isDown ? "text-danger" : "text-success"}>
             {stock.price}
